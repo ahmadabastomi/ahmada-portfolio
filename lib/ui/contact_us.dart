@@ -217,13 +217,13 @@ class _ContactUsState extends State<ContactUs> {
                 ),
               ),
               const SizedBox(height: 20),
-              RaisedButton(
-                color: AppColors.yellow,
-                textColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+              ElevatedButton(
                 onPressed: _sendMail,
                 child: Text('Send'),
+                style: ElevatedButton.styleFrom(
+                    padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                    onPrimary: Colors.white,
+                    primary: AppColors.yellow),
               ),
             ],
           ),

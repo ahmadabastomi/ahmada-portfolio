@@ -59,22 +59,26 @@ class About extends StatelessWidget {
                         const SizedBox(height: 30),
                         Row(
                           children: [
-                            RaisedButton(
+                            ElevatedButton(
                               onPressed: () {},
-                              color: AppColors.yellow,
-                              textColor: Colors.white,
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 20),
                               child: Text('HIRE ME NOW'),
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 30, vertical: 20),
+                                onPrimary: Colors.white,
+                                primary: AppColors.yellow,
+                              ),
                             ),
                             const SizedBox(width: 20),
-                            RaisedButton(
+                            ElevatedButton(
                               onPressed: _downloadCV,
-                              color: AppColors.black,
-                              textColor: Colors.white,
-                              padding: const EdgeInsets.symmetric(
-                                  horizontal: 30, vertical: 20),
                               child: Text('VIEW RESUME'),
+                              style: ElevatedButton.styleFrom(
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 30, vertical: 20),
+                                onPrimary: Colors.white,
+                                primary: AppColors.black,
+                              ),
                             ),
                           ],
                         ),
@@ -134,22 +138,24 @@ class About extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               const SizedBox(height: 30),
-              RaisedButton(
-                onPressed: () {},
-                color: AppColors.yellow,
-                textColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+              ElevatedButton(
+                onPressed: _hireMe,
                 child: Text('HIRE ME NOW'),
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                  onPrimary: Colors.white,
+                  primary: AppColors.yellow,
+                ),
               ),
               const SizedBox(height: 20),
-              RaisedButton(
+              ElevatedButton(
                 onPressed: _downloadCV,
-                color: AppColors.black,
-                textColor: Colors.white,
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 30, vertical: 20),
                 child: Text('VIEW RESUME'),
+                style: ElevatedButton.styleFrom(
+                  padding: EdgeInsets.symmetric(horizontal: 30, vertical: 20),
+                  onPrimary: Colors.white,
+                  primary: AppColors.black,
+                ),
               ),
               const SizedBox(height: 50),
               Text('MY SKILLS', style: AppStyles.title),
@@ -157,13 +163,19 @@ class About extends StatelessWidget {
               const SizedBox(height: 3),
               Container(width: 50, height: 2, color: AppColors.yellow),
               const SizedBox(height: 25),
-              Wrap(
-                spacing: 10,
-                runSpacing: 10,
-                alignment: WrapAlignment.center,
-                runAlignment: WrapAlignment.spaceBetween,
-                children: SKILLS.map(_buildSkill).toList(),
-              ),
+              // Wrap(
+              //   spacing: 10,
+              //   runSpacing: 10,
+              //   alignment: WrapAlignment.center,
+              //   runAlignment: WrapAlignment.spaceBetween,
+              //   children: SKILLS.map(_buildSkill).toList(),
+              // ),
+              Container(
+                alignment: Alignment.center,
+                child: Column(
+                  children: SKILLS.map(_buildSkill).toList(),
+                ),
+              )
             ],
           ),
         ),
@@ -173,8 +185,15 @@ class About extends StatelessWidget {
     launch(AppConstants.cv);
   }
 
+  void _hireMe() {
+    launch(AppConstants.linkedin);
+  }
+
   Widget _buildSkill(Skill skill) => Container(
+    margin: EdgeInsets.only(top: 10),
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
               width: 20,
@@ -194,7 +213,9 @@ class About extends StatelessWidget {
                                           : 'images/git.png'))),
             ),
             Container(
-                margin: EdgeInsets.only(left: 10), child: Text(skill.name))
+                alignment: Alignment.center,
+                margin: EdgeInsets.only(left: 10),
+                child: Text(skill.name))
           ],
         ),
       );

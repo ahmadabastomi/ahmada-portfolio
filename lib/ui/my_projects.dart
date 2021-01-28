@@ -90,23 +90,20 @@ class MyProjects extends StatelessWidget {
                         SizedBox(
                           height: MediaQuery.of(context).size.width * .025,
                         ),
-                        OutlineButton(
+                        OutlinedButton(
                           onPressed: () {
                             launch(project.url);
                           },
-                          color: AppColors.yellow,
-                          textColor: AppColors.yellow,
-                          borderSide: BorderSide(
-                            color: AppColors.yellow.withOpacity(.5),
-                            width: 5,
-                          ),
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 50,
-                            vertical: 20,
-                          ),
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
+                          style: OutlinedButton.styleFrom(
+                              backgroundColor: AppColors.greyLight,
+                              primary: AppColors.yellow,
+                              side: BorderSide(
+                                  color: AppColors.yellow.withOpacity(0.5),
+                                  width: 5),
+                              padding: EdgeInsets.symmetric(
+                                  horizontal: 50, vertical: 20),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(20))),
                           child: Text('Visit'),
                         ),
                       ],
@@ -132,9 +129,10 @@ class MyProjects extends StatelessWidget {
               ),
               SizedBox(width: MediaQuery.of(context).size.width * .075),
               SizedBox(
-                height: MediaQuery.of(context).size.width * .01,
+                //height: MediaQuery.of(context).size.width * .01,
+                height: 20,
               ),
-              Text(project.name, style: AppStyles.title),
+              Text(project.name, style: AppStyles.title,textAlign: TextAlign.center,),
               SizedBox(
                 height: MediaQuery.of(context).size.width * .01,
               ),
@@ -147,6 +145,7 @@ class MyProjects extends StatelessWidget {
               ),
               Wrap(
                 spacing: 10,
+                runSpacing: 5,
                 alignment: WrapAlignment.center,
                 children:
                     project.skills.map((s) => Chip(label: Text(s))).toList(),
@@ -154,23 +153,18 @@ class MyProjects extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.width * .025,
               ),
-              OutlineButton(
+              OutlinedButton(
                 onPressed: () {
                   launch(project.url);
                 },
-                color: AppColors.yellow,
-                textColor: AppColors.yellow,
-                borderSide: BorderSide(
-                  color: AppColors.yellow.withOpacity(.5),
-                  width: 5,
-                ),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 50,
-                  vertical: 20,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
+                style: OutlinedButton.styleFrom(
+                    backgroundColor: AppColors.greyLight,
+                    primary: AppColors.yellow,
+                    side: BorderSide(
+                        color: AppColors.yellow.withOpacity(0.5), width: 5),
+                    padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
+                    shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20))),
                 child: Text('Visit'),
               ),
               Divider(

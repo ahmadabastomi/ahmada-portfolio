@@ -97,7 +97,7 @@ class WorkingProcess extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Align(
-              alignment: Alignment.topRight,
+              alignment: Alignment.topCenter,
               child: Text(
                 index,
                 style: TextStyle(
