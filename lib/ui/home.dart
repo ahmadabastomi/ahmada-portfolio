@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/ui/responsive_widget.dart';
+import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'about.dart';
@@ -302,7 +303,7 @@ class _HomeState extends State<Home> {
                           width: 40,
                           height: 40,
                           child: Icon(
-                            Icons.menu,
+                            MdiIcons.menu,
                             color: Colors.white,
                             size: 40,
                           ),
