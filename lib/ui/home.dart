@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_web_portfolio/ui/responsive_widget.dart';
-import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import 'about.dart';
@@ -171,9 +170,9 @@ class _HomeState extends State<Home> {
                   height: 100,
                   margin: const EdgeInsets.symmetric(vertical: 20),
                   decoration: BoxDecoration(
-                    //color: AppColors.yellow,
-                    borderRadius: BorderRadius.circular(1000),
-                  ),
+                      //color: AppColors.yellow,
+                      borderRadius: BorderRadius.circular(1000),
+                      border: Border.all(color: Colors.grey)),
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(1000),
                       child: Image.asset(

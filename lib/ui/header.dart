@@ -9,7 +9,7 @@ class Header extends StatelessWidget {
   final String _name = "Ahmada Bastomi Wijaya";
   final String _job = "Frontend Developer";
   final String _description =
-      "I am developer has around 4 years experience developing mobile and web applications, using different languages and techniques.";
+      "I am frontend developer has around 2 years experience developing mobile and web applications, using React Native, ReactJS, and Flutter.";
 
   @override
   Widget build(BuildContext context) => ResponsiveWidget(

@@ -10,7 +10,7 @@ import '../config/colors.dart';
 class About extends StatelessWidget {
   final String _avatar = 'images/tommy-remove-bg.png';
   final String _description =
-      "I am developer has around 4 years experience developing mobile and web applications, using different languages and techniques.";
+      "I am frontend developer has around 2 years experience developing mobile and web applications, using React Native, ReactJS, and Flutter.";
 
   @override
   Widget build(BuildContext context) => ResponsiveWidget(
@@ -89,10 +89,8 @@ class About extends StatelessWidget {
               const SizedBox(height: 3),
               Container(width: 75, height: 2, color: AppColors.yellow),
               const SizedBox(height: 50),
-              Wrap(
-                spacing: 25,
-                runSpacing: 25,
-                runAlignment: WrapAlignment.spaceBetween,
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: SKILLS.map(_buildSkill).toList(),
               ),
             ],
@@ -175,5 +173,29 @@ class About extends StatelessWidget {
     launch(AppConstants.cv);
   }
 
-  Widget _buildSkill(Skill skill) => Chip(label: Text(skill.name));
+  Widget _buildSkill(Skill skill) => Container(
+        child: Row(
+          children: [
+            Container(
+              width: 20,
+              height: 20,
+              decoration: BoxDecoration(
+                  image: DecorationImage(
+                      image: AssetImage((skill.name == 'React Native')
+                          ? 'images/react.png'
+                          : (skill.name == 'ReactJS')
+                              ? 'images/react.png'
+                              : (skill.name == 'Dart')
+                                  ? 'images/dart.png'
+                                  : (skill.name == 'JavaScript')
+                                      ? 'images/javascript.png'
+                                      : (skill.name == 'Flutter')
+                                          ? 'images/flutter.png'
+                                          : 'images/git.png'))),
+            ),
+            Container(
+                margin: EdgeInsets.only(left: 10), child: Text(skill.name))
+          ],
+        ),
+      );
 }
