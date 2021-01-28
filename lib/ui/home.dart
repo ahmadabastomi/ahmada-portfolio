@@ -175,10 +175,9 @@ class _HomeState extends State<Home> {
                   ),
                   child: ClipRRect(
                       borderRadius: BorderRadius.circular(1000),
-                      child: Icon(
-                        Icons.menu,
-                        color: Colors.white,
-                        size: 40,
+                      child: Image.asset(
+                        'images/tommy-remove-bg.png',
+                        fit: BoxFit.cover,
                       )),
                 ),
                 Divider(),
