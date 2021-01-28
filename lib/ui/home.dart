@@ -297,17 +297,13 @@ class _HomeState extends State<Home> {
                       onTap: () {
                         Scaffold.of(ctx).openDrawer();
                       },
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(1000),
-                        child: Container(
-                          width: 40,
-                          height: 40,
-                          child: Icon(
-                            MdiIcons.menu,
-                            color: Colors.white,
-                            size: 40,
-                          ),
-                        ),
+                      child: Container(
+                        width: 40,
+                        height: 40,
+                        decoration: BoxDecoration(
+                            image: DecorationImage(
+                                image: AssetImage('icons/icon-menu.png'),
+                                fit: BoxFit.cover)),
                       ),
                     ),
                   ),
