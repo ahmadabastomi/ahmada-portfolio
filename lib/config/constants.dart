@@ -16,5 +16,5 @@ mixin AppConstants {
       '#';
 
   static final String cv =
-      'https://drive.google.com/file/d/1L1gHsEO4nKY-_JW4dVU6Cml7RvxOP1ep/view?usp=sharing';
+      'https://drive.google.com/file/d/1CvXVSBu2ksqirleEWLKec4z1XK6nGFJ0/view?usp=sharing';
 }
