@@ -12,9 +12,8 @@ mixin AppConstants {
 
   static final String twitter = '#';
 
-  static final String facebook =
-      '#';
+  static final String facebook = '#';
 
   static final String cv =
-      'https://drive.google.com/file/d/1CvXVSBu2ksqirleEWLKec4z1XK6nGFJ0/view?usp=sharing';
+      'https://drive.google.com/file/d/106nk3uxx1EHxW5wza5Lr9Mdbkegj8CCR/view?usp=sharing';
 }
