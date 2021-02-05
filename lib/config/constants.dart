@@ -15,5 +15,5 @@ mixin AppConstants {
   static final String facebook = '#';
 
   static final String cv =
-      'https://drive.google.com/file/d/1jeESMy8cItwjX7RmGkt3MC6PsfuxhKgN/view?usp=sharing';
+      'https://drive.google.com/file/d/13jAdjZlFEZOjXiMZCpRit2Bm90iJN0Yb/view?usp=sharing';
 }
